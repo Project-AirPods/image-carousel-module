@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS listings;
+
+CREATE TABLE listings (id BIGSERIAL NOT NULL PRIMARY KEY, name TEXT NOT NULL);
+
+COPY listings FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/listings/listings0K-2500K.csv' DELIMITER ',';
+COPY listings FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/listings/listings2500K-5000K.csv' DELIMITER ',';
+COPY listings FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/listings/listings5000K-7500K.csv' DELIMITER ',';
+COPY listings FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/listings/listings7500K-10000K.csv' DELIMITER ',';

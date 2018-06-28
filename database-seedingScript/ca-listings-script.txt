@@ -1,0 +1,10 @@
+USE projectairpodscarousel;
+
+DROP TABLE IF EXISTS listings;
+
+CREATE TABLE listings(id INT PRIMARY KEY, listing TEXT);
+
+COPY listings (id, listing) FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/listings/listings0K-2500K.csv' WITH DELIMITER = ',';
+COPY listings (id, listing) FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/listings/listings2500K-5000K.csv' WITH DELIMITER = ',';
+COPY listings (id, listing) FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/listings/listings5000K-7500K.csv' WITH DELIMITER = ',';
+COPY listings (id, listing) FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/listings/listings7500K-10000K.csv' WITH DELIMITER = ',';

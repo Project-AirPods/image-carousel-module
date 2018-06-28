@@ -37,3 +37,5 @@ npm install -g webpack
 npm install
 ```
 
+## Notes from @datonedoe:
+

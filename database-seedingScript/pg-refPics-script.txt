@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS reference_pics;
+
+CREATE TABLE reference_pics (id BIGSERIAL NOT NULL PRIMARY KEY, listing_id BIGSERIAL NOT NULL, caption TEXT NOT NULL, verifiablePhoto boolean NOT NULL, src TEXT NOT NULL, listing_name TEXT NOT NULL);
+
+COPY reference_pics FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics0K-250K.csv' DELIMITER ',';
+COPY reference_pics FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics250K-500K.csv' DELIMITER ',';
+COPY reference_pics FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics500K-750K.csv' DELIMITER ',';
+COPY reference_pics FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics750K-1000K.csv' DELIMITER ',';
+
+ALTER TABLE reference_pics DROP COLUMN listing_name;

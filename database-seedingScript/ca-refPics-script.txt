@@ -1,0 +1,10 @@
+USE projectairpodscarousel;
+
+DROP TABLE IF EXISTS reference_pics;
+
+CREATE TABLE reference_pics (   id INT,   listing_id INT,   caption TEXT,   verifiablePhoto BOOLEAN,   src TEXT, listing_name TEXT,  PRIMARY KEY (id, listing_id));
+
+COPY reference_pics (id, listing_id, caption, verifiablePhoto, src, listing_name) FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics0K-250K.csv' WITH DELIMITER = ',';
+COPY reference_pics (id, listing_id, caption, verifiablePhoto, src, listing_name)  FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics250K-500K.csv' WITH DELIMITER = ',';
+COPY reference_pics (id, listing_id, caption, verifiablePhoto, src, listing_name)  FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics500K-750K.csv' WITH DELIMITER = ',';
+COPY reference_pics (id, listing_id, caption, verifiablePhoto, src, listing_name)  FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics750K-1000K.csv' WITH DELIMITER = ',';

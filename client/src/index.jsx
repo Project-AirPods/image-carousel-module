@@ -31,7 +31,10 @@ class App extends React.Component {
         .then(response => response.data[0].name);
 
       const pictures = await axios.get(`/listings/${id}/pictures`)
-      .then(response => response.data);
+      .then(response => {
+        console.log('response.data', response.data)
+        return response.data
+      });
 
       this.setState({
         listingName: name,
