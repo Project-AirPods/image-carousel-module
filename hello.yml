@@ -1,0 +1,12 @@
+config:
+  target: 'http://localhost:3004'
+  phases:
+    - duration: 60
+      arrivalRate: 1200
+      # rampTo: 5000
+scenarios:
+  - flow:
+    # - loop:
+      - get:
+          url: "/listings/{{$randomNumber(1,250000)}}/pictures"
+      # count: 1000

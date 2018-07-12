@@ -1,6 +1,6 @@
 {
   "name": "image-carousel-module",
-  "description": "> Project description",
+  "description": "Project description",
   "author": "",
   "license": "ISC",
   "engines": {
@@ -8,7 +8,8 @@
   },
   "scripts": {
     "eslint": "eslint",
-    "start": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
     "build": "npx webpack -d --watch"
   },
@@ -20,9 +21,12 @@
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.1",
     "cassandra-driver": "^3.5.0",
+    "cluster": "^0.7.7",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
     "mysql": "^2.15.0",
+    "newrelic": "^4.2.0",
     "nodemon": "^1.17.5",
     "path": "^0.12.7",
     "pg": "^7.4.3",
@@ -32,6 +36,7 @@
     "react-dom": "^16.4.0",
     "react-fontawesome": "^1.6.1",
     "react-icons": "^2.2.7",
+    "redis": "^2.8.0",
     "serve-webpack-client": "0.0.4",
     "simple-flexbox": "^1.2.0",
     "superagent": "^3.8.3",
