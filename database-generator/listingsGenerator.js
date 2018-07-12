@@ -14,7 +14,7 @@ function generateValuesStringsAndSaveToJson(
     for (var i = startId; i <= endId; i++) {
       if (i % 500000 === 0) console.log('i', i);
       var listingName = generateListingName();
-      str += `${i}, '${listingName}'`+'\n';
+      str += `${i}, ${listingName}`+'\n';
       ans[i] = listingName;
     }
 
@@ -60,8 +60,8 @@ function generateValuesStringsAndSaveToJson(
 
 (async () => {
   // await generateValuesStringsAndSaveToJson(1, 10);
-  // await generateValuesStringsAndSaveToJson(1, 2500000);
-  // await generateValuesStringsAndSaveToJson(2500001, 5000000);
-  await generateValuesStringsAndSaveToJson(5000001, 7500000);
-  await generateValuesStringsAndSaveToJson(7500001, 10000000);
+  await generateValuesStringsAndSaveToJson(1, 2500000);
+  await generateValuesStringsAndSaveToJson(2500001, 5000000);
+  // await generateValuesStringsAndSaveToJson(5000001, 7500000);
+  // await generateValuesStringsAndSaveToJson(7500001, 10000000);
 })();
