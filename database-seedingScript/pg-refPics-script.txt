@@ -8,3 +8,4 @@ COPY reference_pics FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Proje
 COPY reference_pics FROM '/Users/darwin/Dropbox/HackReactor/SeniorProjects/Project-AirPods/image-carousel-module/offlineData/refPics/refPics750K-1000K.csv' DELIMITER ',';
 
 ALTER TABLE reference_pics DROP COLUMN listing_name;
+CREATE INDEX listing_id_idx ON reference_pics (listing_id);

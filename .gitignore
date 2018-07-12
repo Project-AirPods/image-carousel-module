@@ -6,6 +6,10 @@ npm
 npm-debug.log
 node_modules/
 
+## Config files ##
+config.js
+airpods-carousel.pem
+
 pids
 *.pid
 logs

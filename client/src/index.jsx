@@ -1,10 +1,6 @@
 import ModalConductor from './components/ModalConductor.jsx';
-
-
 const React = require('react');
-
 const reactDOM = require('react-dom');
-
 const axios = require('axios');
 
 const listingId = window.location.pathname.split('/')[2];
@@ -27,9 +23,9 @@ class App extends React.Component {
 
   async getData (id) {
     try {
-      const name = await axios.get(`/listings/${id}`)
-        .then(response => response.data[0].name);
-
+      // const name = await axios.get(`/listings/${id}`)
+      //   .then(response => response.data[0].name);
+      console.log('id', id)
       const pictures = await axios.get(`/listings/${id}/pictures`)
       .then(response => {
         console.log('response.data', response.data)
@@ -37,7 +33,7 @@ class App extends React.Component {
       });
 
       this.setState({
-        listingName: name,
+        listingName: "testing",
         currentPictures: pictures,
         backgroundImage: pictures[0].src,
       });
