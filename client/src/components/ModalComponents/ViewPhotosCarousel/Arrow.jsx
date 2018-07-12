@@ -1,5 +1,4 @@
-import React from 'React';
-
+import React from 'react';
 
 const Arrow = ({ direction, clickFunction}) => {
   let icon = null;
