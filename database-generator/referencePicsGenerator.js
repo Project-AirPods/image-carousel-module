@@ -12,9 +12,9 @@ function generateValuesStringsAndSaveToJson(startId = 1, endId = 500000) {
       if (i % 100000 === 0) console.log(i);
       for (var picIndex = 0; picIndex < imageList.length; picIndex++) {
         str +=
-          `${i * 1000 + picIndex}, ${i}, '${getRandomDescription()}', ${
+          `${i * 1000 + picIndex}, ${i}, ${getRandomDescription()}, ${
             Math.random() > 0.3 ? true : false
-          }, '${imageList[picIndex]}', '${listingName[i]}'` + '\n';
+          }, ${imageList[picIndex]}, ${listingName[i]}` + '\n';
       }
     }
 
