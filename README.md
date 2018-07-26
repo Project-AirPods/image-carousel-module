@@ -10,6 +10,8 @@ Built on Node, Express, Progres, Cassandra, Docker, AWS EC2, Nginx
 Horizontally scaled, tested up to handle 1500+ events, 6000+ database writes per second
 
 ![System architecture](./media/homepods-imagemodule.png)
+
+![RPS Data](./media/rpsdata.png)
 ## Related Projects
 
   - https://github.com/Project-AirPods/image-carousel-module
